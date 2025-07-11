@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade005 - Gestão de alunos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>Gestão de alunos</h1>
+    </header>
+    
+    <main>
+      <section class="container">
+        <article id="dadosAluno">
+          <form>
+            <h2>Dados do aluno</h2>
+            <label for="nomeAluno">Nome completo do aluno:</label>
+            <input type="text" id="nomeAluno">
+
+            <label for="nota1Bim">Notas do 1º bimestre:</label>
+            <input type="number" id="nota1Bim">
+
+            <label for="nota2Bim">Notas do 2º bimestre:</label>
+            <input type="number" id="nota2Bim">
+
+            <label for="nota3Bim">Notas do 3º bimestre:</label>
+            <input type="number" id="nota3Bim">
+
+            <label for="nota4Bim">Notas do 4º bimestre:</label>
+            <input type="number" id="nota4Bim">
+
+            <label for="frequenciaAluno">Frequencia % do aluno:</label>
+            <input type="number" id="frequenciaAluno">
+
+            <button type="button" id="adicionarAluno">Adicionar aluno</button>
+
+            <h2 class="estilo_resultado"><span id="erro"></span></h2>
+
+          </form>
+        </article>
+
+        <article id="planilhaDados">
+          <table>
+
+            <thead>
+              <tr>
+                <th>Nome do Aluno</th>
+                <th>Nota do aluno</th>
+                <th>Frequencia do aluno</th>
+                <th>Média</th>
+                <th>Total nota</th>
+                <th>Status aluno</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableBody">
+            </tbody>
+
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
