@@ -18,7 +18,7 @@ export function printTabela(aluno) {
           <td>${aluno.frequencia}</td>
           <td>${aluno.media}</td>
           <td>${aluno.total}</td>
-          <td>${aluno.situacao}</td>
+          <td>${aluno.sitacao}</td>
           <td>
               <button type="button" class="apagarDados">apagar</button>
               <button type="button" class="alterarDados">alterar</button>

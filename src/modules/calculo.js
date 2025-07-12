@@ -7,7 +7,7 @@ export function calcularMedia() {
   const nota4 = document.getElementById('nota4Bim').value;
   const notas = [nota1, nota2, nota3, nota4].map(n => parseFloat(n));
 
-  if (notas.some(n => isNaN(n) || n < 0 || n > 10)) {
+  if (notas.some(n => isNaN(n) || n < 0 )) {
     printResultado('erro', 'Notas inválidas');
     return null;
   }
