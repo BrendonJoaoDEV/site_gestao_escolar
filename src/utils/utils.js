@@ -1,30 +1,28 @@
 export function botaoEvento(idbotao, funcao) {
-    const botao = document.getElementById(idbotao);
-    botao.addEventListener('click',funcao);
+  const botao = document.getElementById(idbotao);
+  if (botao) botao.addEventListener('click', funcao);
 }
 
-export function printResultado(id,print){
-    const resultado = document.getElementById(id);
-    if (resultado) resultado.innerHTML = print;
+export function printResultado(id, print) {
+  const elemento = document.getElementById(id);
+  if (elemento) elemento.innerHTML = print;
 }
 
-export function printTabela(media) {
-    console.log(`media dentro do utils ${media}`)
-    botaoEvento('adicionarAluno', () => {
-        printResultado('tableBody', `
-        <tbody>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th>${media}</th>
-                <th></th>
-                <th></th>
-                <th>
-                    <button type="button" id="apagarDados">apagar</button>
-                    <button type="button" id="alterarDados">alterar</button>
-                </th>
-            </tr>
-        </tbody>`);
-    });
-};
+export function printTabela(aluno) {
+  const tableBody = document.getElementById('tableBody');
+  if (tableBody) {
+    tableBody.innerHTML += `
+      <tr>
+          <td>${aluno.nome}</td>
+          <td>${aluno.notas}</td>
+          <td>${aluno.frequencia}</td>
+          <td>${aluno.media}</td>
+          <td>${aluno.total}</td>
+          <td>${aluno.situacao}</td>
+          <td>
+              <button type="button" class="apagarDados">apagar</button>
+              <button type="button" class="alterarDados">alterar</button>
+          </td>
+      </tr>`;
+  }
+}
