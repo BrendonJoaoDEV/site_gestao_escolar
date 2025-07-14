@@ -1,6 +1,6 @@
 export function adicionarAluno (estruturaDados, alunoAdicionar) {
     estruturaDados.push(alunoAdicionar);
-    return estruturaDados
+    return estruturaDados;
 }
 
 export function removerAluno (estruturaDados, idAlunoRemover) {
@@ -22,5 +22,5 @@ export function removerAluno (estruturaDados, idAlunoRemover) {
         return aluno.id = aluno.id -1;
     });
 
-    return estruturaDados
+    return estruturaDados;
 }
