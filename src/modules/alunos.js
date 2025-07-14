@@ -1,19 +1,19 @@
-export function adicionarAluno (bancoDados, alunoAdicionar) {
-    bancoDados.push(alunoAdicionar);
-    return bancoDados
+export function adicionarAluno (estruturaDados, alunoAdicionar) {
+    estruturaDados.push(alunoAdicionar);
+    return estruturaDados
 }
 
-export function removerAluno (bancoDados, idAlunoRemover) {
+export function removerAluno (estruturaDados, idAlunoRemover) {
     // Encontra o aluno que deve ser removido pelo seu id
-    const alunoRemover = bancoDados.find((aluno) => {
+    const alunoRemover = estruturaDados.find((aluno) => {
         return aluno.id === idAlunoRemover;
     });
 
     // Remove o aluno que deve ser removido
-    bancoDados.splice(alunoRemover.id-1, 1)
+    estruturaDados.splice(alunoRemover.id-1, 1)
 
     // Lista os alunos depois do aluno removido
-    const alunosDepoisRemovido = bancoDados.filter((aluno) => {
+    const alunosDepoisRemovido = estruturaDados.filter((aluno) => {
         return aluno.id > idAlunoRemover;
     });
 
@@ -22,5 +22,5 @@ export function removerAluno (bancoDados, idAlunoRemover) {
         return aluno.id = aluno.id -1;
     });
 
-    return bancoDados
+    return estruturaDados
 }
