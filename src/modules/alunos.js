@@ -5,7 +5,7 @@ export function adicionarAluno (bancoDados, alunoAdicionar) {
 
 export function removerAluno (bancoDados, idAlunoRemover) {
     // Encontra o aluno que deve ser removido pelo seu id
-    const alunoRemover = bancoDados.find((aluno, indice) => {
+    const alunoRemover = bancoDados.find((aluno) => {
         return aluno.id === idAlunoRemover;
     });
 
