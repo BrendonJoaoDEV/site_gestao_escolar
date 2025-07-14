@@ -1,4 +1,4 @@
-export function adicionarAluno (bancoDados, alunoAdicionar) {
-    bancoDados.push(alunoAdicionar);
-    return bancoDados
+export function adicionarAluno (estruturaDados, alunoAdicionar) {
+    estruturaDados.push(alunoAdicionar);
+    return estruturaDados
 }
