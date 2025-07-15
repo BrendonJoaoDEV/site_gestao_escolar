@@ -14,29 +14,30 @@
     
     <main>
       <section class="container">
-        <article id="dadosAluno">
-          <form>
+        <article>
+          <form id="dadosAluno">
             <h2>Dados do aluno</h2>
             <label for="nomeAluno">Nome completo do aluno:</label>
             <input type="text" id="nomeAluno">
 
-            <label for="nota1Bim">Notas do 1º bimestre:</label>
-            <input type="number" id="nota1Bim">
-
-            <label for="nota2Bim">Notas do 2º bimestre:</label>
-            <input type="number" id="nota2Bim">
-
-            <label for="nota3Bim">Notas do 3º bimestre:</label>
-            <input type="number" id="nota3Bim">
-
-            <label for="nota4Bim">Notas do 4º bimestre:</label>
-            <input type="number" id="nota4Bim">
-
             <label for="frequenciaAluno">Frequencia % do aluno:</label>
             <input type="number" id="frequenciaAluno">
+            <div id="bimestre">
+
+              <label for="nota1Bim">1º bimestre:</label>
+              <input type="number" id="nota1Bim">
+
+              <label for="nota2Bim">2º bimestre:</label>
+              <input type="number" id="nota2Bim">
+
+              <label for="nota3Bim">3º bimestre:</label>
+              <input type="number" id="nota3Bim">
+
+              <label for="nota4Bim">4º bimestre:</label>
+              <input type="number" id="nota4Bim">
+            </div>
 
             <button type="button" id="adicionarAluno">Adicionar aluno</button>
-
             <h2 class="estilo_resultado"><span id="erro"></span></h2>
 
           </form>
