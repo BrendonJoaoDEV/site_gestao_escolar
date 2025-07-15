@@ -1,3 +1,4 @@
+export function acessibilidade() {
 //------------TEMAS--------//
 const btnTemas = document.getElementById('temas');
 
@@ -21,3 +22,4 @@ btnDiminuir.addEventListener('click', () => {
   tamanhoFonte = Math.max(12, tamanhoFonte - 2); // mínimo 12px para não ficar muito pequeno
   document.body.style.fontSize = tamanhoFonte + 'px';
 });
+}
