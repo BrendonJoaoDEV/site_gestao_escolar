@@ -6,16 +6,18 @@
     <title>Atividade005 - Gestão de alunos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+
+  <body class="tema-claro">
     <header>
-      <h1>Escola Celeste</h1>
-      <p>Sistema de gestão de aluno</p>
+      <h1>Gestão de aluno</h1>
+      <p>Sistema</p>
     </header>
-    <button id="toggleTheme" title="Trocar tema">🎨</button>
+    
+    <button type="button" id="temas" accesskey="t" title="Atalho: Alt + T">Temas</button>
     <div id="zoomControls">
       🔍
-      <button id="zoomText" title="Aumentar texto"> + </button>
-      <button id="unzoomText" title="Diminuir texto"> − </button>
+        <button type="button" id="aumentar-fonte" accesskey="+" title="Atalho: Alt, Shift, +  ">+</button>
+        <button type="button" id="diminuir-fonte" accesskey="-" title="Atalho: Alt, - ">-</button>
     </div>
 
     <main>
@@ -28,6 +30,7 @@
 
             <label for="frequenciaAluno">Frequencia % do aluno:</label>
             <input type="number" id="frequenciaAluno">
+            
             <div id="bimestre">
               <div class="linha-bimestre">
                 <div class="campo-bimestre">
@@ -52,11 +55,16 @@
             </div>
             <button type="button" id="adicionarAluno">Adicionar aluno</button>
             <h2 class="estilo_resultado"><span id="erro"></span></h2>
-
           </form>
         </article>
-
+          <hr>
         <article id="planilhaDados">
+          <label for="filtro">Escolha uma opção de filtro:</label>
+          <select id="filtro" name="filtro">
+            <option value="filtroNormal">Tabela normal</option>
+            <option value="filtroReprovado">Alunos Reprovados</option>
+            <option value="filtroAprovado">Alunos Aprovados</option>
+          </select>
           <table>
 
             <thead>
