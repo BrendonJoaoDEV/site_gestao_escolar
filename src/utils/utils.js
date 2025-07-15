@@ -1,3 +1,32 @@
+export function botaoEvento(idbotao, funcao) {
+  const botao = document.getElementById(idbotao);
+  if (botao) botao.addEventListener('click', funcao);
+}
+
+export function printResultado(id, print) {
+  const elemento = document.getElementById(id);
+  if (elemento) elemento.innerHTML = print;
+}
+
+export function printTabela(aluno) {
+  const tableBody = document.getElementById('tableBody');
+  if (tableBody) {
+    tableBody.innerHTML += `
+      <tr>
+          <td>${aluno.nome}</td>
+          <td>${aluno.notas}</td>
+          <td>${aluno.frequencia}</td>
+          <td>${aluno.media}</td>
+          <td>${aluno.total}</td>
+          <td>${aluno.sitacao}</td>
+          <td>
+              <button type="button" class="apagarDados">apagar</button>
+              <button type="button" class="alterarDados">alterar</button>
+          </td>
+      </tr>`;
+  }
+}
+
 export function carregarAlunos (bancoDados, tabelaHtml) {
     bancoDados.forEach((aluno) => {
         tabelaHtml.innerHTML += `
