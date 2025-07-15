@@ -8,10 +8,10 @@ export function printResultado(id, print) {
   if (elemento) elemento.innerHTML = print;
 }
 
-export function printTabela(aluno) {
-  const tableBody = document.getElementById('tableBody');
-  if (tableBody) {
-    tableBody.innerHTML += `
+export function carregarAlunos (bancoDados, tabelaHtml) {
+  if (tabelaHtml) {
+    bancoDados.forEach((aluno) => {
+        tabelaHtml.innerHTML += `
       <tr>
         <td>${aluno.id}</td>
         <td>${aluno.nome}</td>
@@ -24,6 +24,7 @@ export function printTabela(aluno) {
             <button type="button" class="apagarDados">apagar</button>
             <button type="button" class="alterarDados">alterar</button>
         </td>
-    </tr>`;
+      </tr>`;
+    });
   }
 }
