@@ -1,3 +1,8 @@
+export function gerarIdUnico(ultimoId) {
+  ultimoId++;
+  return ultimoId;
+}
+
 export function adicionarAluno (estruturaDados, alunoAdicionar) {
     estruturaDados.push(alunoAdicionar);
     return estruturaDados;

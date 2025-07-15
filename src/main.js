@@ -2,6 +2,9 @@ import { botaoEvento, carregarAlunos} from "./utils/utils.js";
 import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia } from "./modules/calculo.js";
 
+// Variável para controlar o último ID usado
+let ultimoId = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
   const tabela = document.getElementById('tableBody');
   const entradaNome = document.getElementById('nomeAluno');
