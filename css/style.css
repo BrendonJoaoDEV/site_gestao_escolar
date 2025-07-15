@@ -200,3 +200,76 @@ button:hover {
 #planilhaDados .btn-acao:hover {
     background-color: #2e5a5c;
 }
+
+/* ======= Botão de tema ======= */
+#toggleTheme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #26dae0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#toggleTheme:hover {
+  background-color: #2e5a5c;
+}
+
+/* ======= Tema Escuro ======= */
+.tema-escuro {
+  background-color: #222 !important;
+  color: #f0f0f0 !important;
+}
+
+.tema-escuro main,
+.tema-escuro .container,
+.tema-escuro #planilhaDados table,
+.tema-escuro #dadosAluno input {
+  background-color: #333 !important;
+  color: #f0f0f0 !important;
+}
+
+.tema-escuro th {
+  background-color: #2e5a5c !important;
+}
+
+/* ======= Botões de Zoom de Texto ======= */
+#zoomControls {
+  position: fixed;
+  top: 120px; /* abaixo do botão de tema */
+  right: 20px;
+  z-index: 1000;
+  font-size: 20px;
+  color: white;
+  background-color: #26dae0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#zoomControls button {
+  background-color: white;
+  color: #1eabb0;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#zoomControls button:hover {
+  background-color: #d4f3f3;
+}
