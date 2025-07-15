@@ -206,35 +206,20 @@ select{
   z-index: 1000;
 }
 
-/* ======= Zoom de Texto ======= */
-#zoomControls {
-  position: fixed;
-  top: 120px;
-  right: 20px;
-  z-index: 1000;
-  font-size: 20px;
-  color: white;
-  background: #26dae0;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  gap: 5px;
+/*-----------------AUMENTAR E DIMINUIR FONTES--------*/
+body {
+  font-size: 16px;
+  transition: font-size 0.3s;
 }
 
-/* ======= Tema Escuro ======= */
-.tema-escuro {
-  background: #4b4b4b !important;
-  color: #f0f0f0 !important;
+/*-----------------TEMAS----------------*/
+body.tema-claro {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
 }
-.tema-escuro main,
-.tema-escuro .container,
-.tema-escuro #planilhaDados table,
-.tema-escuro #dadosAluno input {
-  background: #333 !important;
-  color: #f0f0f0 !important;
-}
-.tema-escuro th {
-  background: #2e5a5c !important;
+
+body.tema-escuro {
+  background-color: #121212;
+  color: #fff;
 }
