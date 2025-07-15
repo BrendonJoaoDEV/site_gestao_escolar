@@ -1,212 +1,185 @@
-/* ======= Reset e configurações globais  =======*/
+/* ======= Reset ======= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
 }
 
-/*  ======= Estrutura principal  =======*/
-main {
-  background-color: white;
-  color: black;
-  font-size: 20px;
+/* ======= Estrutura ======= */
+main, #dadosAluno {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
-
-/* ======= Cabeçalho  =======*/
-header {
-  background-color: #1eabb0;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  min-height: 60px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
-  margin-bottom: 80px;
-}
-
-header h1 {
-  font-size: 60px;
-  padding: 20px 0;
-}
-
-/*  ======= Rodapé  =======*/
-footer {
-  background-color: #1eabb0;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  width: 100%;
-}
-
-/*  ======= Botão principal  ======= */
-button {
-  padding: 15px;
-  background-color: #1eabb0;
-  width: 170px;
-  height: 50px;
+main {
+  background: #fff;
+  color: #000;
   font-size: 20px;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  align-self: center;
-  margin-top: 20px;
+  justify-content: center;
+  padding: 20px;
 }
-
-button:hover {
-  background-color: #2e5a5c;
-  color: white;
-}
-/*  ======= Container =======*/
 .container {
+  background: #464646;
   color: white;
-  background-color: #464646;
   border: 7px solid #25d2d8;
   border-radius: 19px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
   width: 95%;
   max-width: 900px;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 
-/*  ======= Formulário =======*/
-#dadosAluno {
+/* ======= Cabeçalho e Rodapé ======= */
+header, footer {
+  background: #1eabb0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+header {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 80px;
+  min-height: 60px;
+}
+header h1 {
+  font-size: 60px;
+  padding: 20px 0;
+}
+footer {
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 18px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
-#dadosAluno h2 {
-  font-size: 40px;
-  padding: 20px;
+/* ======= Botões ======= */
+button {
+  padding: 15px;
+  background: #1eabb0;
+  color: black;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+button:hover {
+  background: #2e5a5c;
+  color: white;
 }
 
-#dadosAluno input {
+/* Botões pequenos */
+#zoomControls button,
+#planilhaDados .btn-acao {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 2px;
+  background: white;
+  color: #1eabb0;
+}
+#planilhaDados .btn-acao {
+  width: auto;
+  padding: 5px 10px;
+  background: #1eabb0;
+  color: white;
+}
+#planilhaDados .btn-acao:hover,
+#zoomControls button:hover {
+  background: #2e5a5c;
+  color: white;
+}
+
+/* ======= Inputs ======= */
+#dadosAluno input,
+.campo-bimestre input {
   width: 300px;
   padding: 8px;
   margin: 10px auto;
-  text-align: center;
   font-size: 20px;
+  text-align: center;
   color: white;
-  background-color: #ffffff;
+  background: #fff;
   border: none;
   border-radius: 5px;
   font-family: inherit;
 }
-
 #dadosAluno input:focus {
   outline: 2px solid #1eabb0;
-  background-color: #f0faff;
+  background: #f0faff;
   color: black;
 }
 
-/*  ======= Bimestres  =======*/
+/* ======= Bimestres ======= */
 #bimestre {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
 }
-
 .linha-bimestre {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-
 .campo-bimestre {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .campo-bimestre label {
   margin-bottom: 5px;
   color: white;
   font-size: 16px;
 }
-
 .campo-bimestre input {
   width: 100px;
   height: 30px;
-  font-size: 16px;
-  text-align: center;
   padding: 5px;
 }
 
-
-/*  ======= Tabela  =======*/
+/* ======= Tabela ======= */
 #planilhaDados {
-    color: rgb(0, 0, 0);
-    margin-top: 20px;
-    overflow-x: auto;
+  color: black;
+  margin-top: 20px;
+  overflow-x: auto;
 }
-
 #planilhaDados table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-    background-color: white;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 16px;
 }
-
+#planilhaDados th, #planilhaDados td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
 #planilhaDados thead {
-    background-color: #18898d;
-    color: white;
+  background: #18898d;
+  color: white;
 }
-
-#planilhaDados th,
-#planilhaDados td {
-    border: 1px solid #cccccc;
-    padding: 10px;
-    text-align: center;
-}
-
 #planilhaDados tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background: #f2f2f2;
 }
-
 #planilhaDados tbody tr:hover {
-    background-color: #d6f2f2;
+  background: #d6f2f2;
 }
 
-/* =======  Botões de ação dentro da tabela  =======*/
-#planilhaDados .btn-acao {
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin: 2px;
-    background-color: #1eabb0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#planilhaDados .btn-acao:hover {
-    background-color: #2e5a5c;
-}
-
-/* ======= Botão de tema ======= */
+/* ======= Botão de Tema ======= */
 #toggleTheme {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #26dae0;
+  background: #26dae0;
   color: white;
   border: none;
   border-radius: 50%;
@@ -216,40 +189,17 @@ button:hover {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: background-color 0.3s ease;
 }
 
-#toggleTheme:hover {
-  background-color: #2e5a5c;
-}
-
-/* ======= Tema Escuro ======= */
-.tema-escuro {
-  background-color: #222 !important;
-  color: #f0f0f0 !important;
-}
-
-.tema-escuro main,
-.tema-escuro .container,
-.tema-escuro #planilhaDados table,
-.tema-escuro #dadosAluno input {
-  background-color: #333 !important;
-  color: #f0f0f0 !important;
-}
-
-.tema-escuro th {
-  background-color: #2e5a5c !important;
-}
-
-/* ======= Botões de Zoom de Texto ======= */
+/* ======= Zoom de Texto ======= */
 #zoomControls {
   position: fixed;
-  top: 120px; /* abaixo do botão de tema */
+  top: 120px;
   right: 20px;
   z-index: 1000;
   font-size: 20px;
   color: white;
-  background-color: #26dae0;
+  background: #26dae0;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -258,18 +208,18 @@ button:hover {
   gap: 5px;
 }
 
-#zoomControls button {
-  background-color: white;
-  color: #1eabb0;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* ======= Tema Escuro ======= */
+.tema-escuro {
+  background: #222 !important;
+  color: #f0f0f0 !important;
 }
-
-#zoomControls button:hover {
-  background-color: #d4f3f3;
+.tema-escuro main,
+.tema-escuro .container,
+.tema-escuro #planilhaDados table,
+.tema-escuro #dadosAluno input {
+  background: #333 !important;
+  color: #f0f0f0 !important;
+}
+.tema-escuro th {
+  background: #2e5a5c !important;
 }
