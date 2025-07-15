@@ -1,111 +1,202 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-body{
-    font-family: Arial,sans-serif;
-    margin: 0px;
-    padding: 0px;
+/* ======= Reset e configurações globais  =======*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main{
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header{
-    height: 170px;
-    margin-bottom: 80px;
-    background-color: #1eabb0;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    min-height: 60px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.295);
+body {
+  font-family: Arial, sans-serif;
 }
 
-header h1{
-    padding: 45px;
-    font-size: 80px;
+/*  ======= Estrutura principal  =======*/
+main {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
-    padding: 15px;
-    width: 60%;
-    height: auto;
-    border: 7px solid #1eabb0;
-    border-radius: 19px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.295);
+/* ======= Cabeçalho  =======*/
+header {
+  background-color: #1eabb0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  min-height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
+  margin-bottom: 80px;
 }
 
+header h1 {
+  font-size: 60px;
+  padding: 20px 0;
+}
+
+/*  ======= Rodapé  =======*/
+footer {
+  background-color: #1eabb0;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  width: 100%;
+}
+
+/*  ======= Botão principal  ======= */
+button {
+  padding: 15px;
+  background-color: #1eabb0;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #2e5a5c;
+  color: white;
+}
+/*  ======= Container =======*/
+.container {
+  color: white;
+  background-color: #464646;
+  border: 7px solid #25d2d8;
+  border-radius: 19px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
+  width: 95%;
+  max-width: 900px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/*  ======= Formulário =======*/
 #dadosAluno {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #dadosAluno h2 {
-    font-size: 40px;
-    padding: 20px;
+  font-size: 40px;
+  padding: 20px;
 }
 
 #dadosAluno input {
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    width: 300px;
-    margin: 10px auto; 
+  width: 300px;
+  padding: 8px;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
 }
 
+#dadosAluno input:focus {
+  outline: 2px solid #1eabb0;
+  background-color: #f0faff;
+  color: black;
+}
+
+/*  ======= Bimestres  =======*/
 #bimestre {
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-    flex-direction: row;
-    gap: 5px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-#bimestre input {
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
-    text-align: center;
+.linha-bimestre {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-#planilhaDados{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.campo-bimestre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#adicionarAluno {
-    padding: 20px;
-    background-color: #1eabb0;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
+.campo-bimestre label {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.campo-bimestre input {
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px;
+}
+
+
+/*  ======= Tabela  =======*/
+#planilhaDados {
     color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    overflow-x: auto;
 }
 
-#adicionarAluno:hover {
-    color: rgb(255, 255, 255);
+#planilhaDados table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background-color: white;
+}
+
+#planilhaDados thead {
+    background-color: #18898d;
+    color: white;
+}
+
+#planilhaDados th,
+#planilhaDados td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#planilhaDados tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#planilhaDados tbody tr:hover {
+    background-color: #d6f2f2;
+}
+
+/* =======  Botões de ação dentro da tabela  =======*/
+#planilhaDados .btn-acao {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 2px;
+    background-color: #1eabb0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#planilhaDados .btn-acao:hover {
     background-color: #2e5a5c;
 }
