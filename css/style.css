@@ -71,6 +71,23 @@ select{
   margin: 20px;
   font-size: 20px;
 }
+/*-----------------AUMENTAR E DIMINUIR FONTES--------*/
+body {
+  font-size: 16px;
+  transition: font-size 0.3s;
+}
+
+/*-----------------TEMAS----------------*/
+body.tema-claro {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.tema-escuro {
+  background-color: #121212;
+  color: #fff;
+}
 /* Container */
 .container {
   background: #ffffff;
@@ -204,22 +221,4 @@ select{
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-}
-
-/*-----------------AUMENTAR E DIMINUIR FONTES--------*/
-body {
-  font-size: 16px;
-  transition: font-size 0.3s;
-}
-
-/*-----------------TEMAS----------------*/
-body.tema-claro {
-  background-color: #fff;
-  color: #000;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.tema-escuro {
-  background-color: #121212;
-  color: #fff;
 }
