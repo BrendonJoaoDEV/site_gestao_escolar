@@ -1,8 +1,3 @@
-export function adicionarAluno (estruturaDados, alunoAdicionar) {
-    estruturaDados.push(alunoAdicionar);
-    return estruturaDados;
-}
-
 export function removerAluno (estruturaDados, idAlunoRemover) {
     // Encontra o aluno que deve ser removido pelo seu id
     const alunoRemover = estruturaDados.find((aluno) => {
@@ -23,4 +18,3 @@ export function removerAluno (estruturaDados, idAlunoRemover) {
     });
 
     return estruturaDados;
-}
