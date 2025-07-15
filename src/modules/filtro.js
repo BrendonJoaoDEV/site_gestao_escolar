@@ -1,16 +1,17 @@
 
+export function filtrarSituacao(estruturaDados) {
+    const situacao = '';
 
-export function verificarSituacao (estruturaDados) {
-    const frequencia = estruturaDados.frequencia;
-    const media = estruturaDados.media;
-
-
-    if (frequencia >=75 && media >= 60) {
-        return 'aprovado';
-    } else {
-        return 'Reprovado';
-
-    } 
-
+    estruturaDados.forEach(estruturaDados => {
+        situacao = (estruturaDados.frequencia >= 75 && estruturaDados.media >= 60) ? 'Aprovado' : 'Reprovado'
+    })
+    return situacao;
 }
+
+
+
+
+
+
+
 
