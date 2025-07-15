@@ -8,6 +8,5 @@ export function verificarSituacao (estruturaDados) {
     } else {
         return 'Reprovado';
 
-    } 
-
+    }
 }

@@ -1,4 +1,3 @@
-
 export function filtrarSituacao(estruturaDados) {
     const situacao = '';
 
@@ -7,11 +6,3 @@ export function filtrarSituacao(estruturaDados) {
     })
     return situacao;
 }
-
-
-
-
-
-
-
-
