@@ -9,6 +9,7 @@ let estruturaDados = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   const tabela = document.getElementById('tableBody');
+  const filtro = document.getElementById('filtro');
   const entradaNome = document.getElementById('nomeAluno');
   const entradaFrequencia = document.getElementById('frequenciaAluno');
   const entradaNota1 = document.getElementById('nota1Bim');
@@ -60,6 +61,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     estruturaDados = adicionarAluno(estruturaDados, aluno);
-    atualizarTabela();
+
+    carregarAlunos(estruturaDados, tabela, (idRemover) => {
+      estruturaDados = removerAluno(estruturaDados, idRemover);
+      atualizarTabela();
+    });
+  });
+
+  filtro.addEventListener('input', () => {
+    if (filtro.value === 'filtroReprovado') {
+      carregarAlunos(filtrarSituacao(estruturaDados, filtro.value), tabela, (idRemover) => {
+        estruturaDados = removerAluno(estruturaDados, idRemover);
+        atualizarTabela();
+      });
+    } else if (filtro.value === 'filtroAprovado') {
+      carregarAlunos(filtrarSituacao(estruturaDados, filtro.value), tabela, (idRemover) => {
+        estruturaDados = removerAluno(estruturaDados, idRemover);
+        atualizarTabela();
+      });
+    } else {
+      carregarAlunos(estruturaDados, tabela, (idRemover) => {
+        estruturaDados = removerAluno(estruturaDados, idRemover);
+        atualizarTabela();
+      });
+    }
   });
 });
