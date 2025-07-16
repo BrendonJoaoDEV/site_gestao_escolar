@@ -8,8 +8,13 @@ export function printResultado(id, print) {
   if (elemento) elemento.innerHTML = print;
 }
 
+export function limparTabela (tabela) {
+  tabela.innerHTML = '';
+}
+
 export function carregarAlunos (bancoDados, tabelaHtml) {
   if (tabelaHtml) {
+    limparTabela(tabelaHtml);
     bancoDados.forEach((aluno) => {
         tabelaHtml.innerHTML += `
       <tr>
