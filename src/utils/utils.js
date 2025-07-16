@@ -15,11 +15,11 @@ export function carregarAlunos (bancoDados, tabelaHtml) {
       <tr>
         <td>${aluno.id}</td>
         <td>${aluno.nome}</td>
-        <td>${aluno.notas}</td>
         <td>${aluno.frequencia}</td>
+        <td>${aluno.notas}</td>
         <td>${aluno.media}</td>
         <td>${aluno.total}</td>
-        <td>${aluno.sitacao}</td>
+        <td>${aluno.situacao}</td>
         <td>
             <button type="button" class="apagarDados">apagar</button>
             <button type="button" class="alterarDados">alterar</button>
