@@ -1,6 +1,8 @@
 import { botaoEvento, carregarAlunos} from "./utils/utils.js";
-import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
+import { gerarIdUnico, adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia } from "./modules/calculo.js";
+import { filtrarSituacao } from "./modules/filtro.js";
+import { verificarSituacao } from "./modules/situacao.js";
 
 // Variável para controlar o último ID usado
 let ultimoId = 0;
@@ -16,20 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
   let estruturaDados = new Array;
 
   botaoEvento('adicionarAluno', () => {
+    let idUnico = 0;
+
+    idUnico = gerarIdUnico(idUnico);
+
+    let nomeAluno = entradaNome.value;
+
+    let frequenciaAluno = entradaFrequencia.value;
+
     let arrayNotas = [entradaNota1.value, entradaNota2.value, entradaNota3.value, entradaNota4.value];
     
+    let mediaAluno = calcularMedia(arrayNotas);
+
+    let totalAluno = arrayNotas.reduce((soma, n) => soma + n);
+
+    let situacaoAluno = verificarSituacao(mediaAluno, frequenciaAluno);
+
     let aluno = {
-      // id: ,
-      nome: entradaNome.value,
-      frequencia: entradaFrequencia.value,
+      id: idUnico,
+      nome: nomeAluno,
+      frequencia: frequenciaAluno,
       notas: arrayNotas,
-      media: calcularMedia(arrayNotas),
-      total: arrayNotas.reduce((soma, n) => soma + n)
-      // situacao:
+      media: mediaAluno,
+      total: totalAluno,
+      situacao: situacaoAluno
     };
 
-    estruturaDados = adicionarAluno(estruturaDados, aluno);
+    console.log(tabela)
 
+    estruturaDados = adicionarAluno(estruturaDados, aluno);
+    
     carregarAlunos(estruturaDados, tabela);
   });
+
 });
