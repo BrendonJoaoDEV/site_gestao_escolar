@@ -6,54 +6,76 @@
     <title>Atividade005 - Gestão de alunos</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
 
+  <body class="tema-claro">
     <header>
-      <h1>Gestão de alunos</h1>
+      <h1>Gestão de aluno</h1>
+      <p>Sistema</p>
     </header>
     
+    <button type="button" id="temas"class="toggleTheme" accesskey="t" title="Atalho: Alt + T">🎨</button>
+    <div id="zoomControls">
+        <button type="button" id="aumentar-fonte" accesskey="+" title="Atalho: Alt, Shift, +  ">+</button>
+        <button type="button" id="diminuir-fonte" accesskey="-" title="Atalho: Alt, - ">-</button>
+    </div>
+
     <main>
       <section class="container">
-        <article id="dadosAluno">
-          <form>
+        <article>
+          <form id="dadosAluno">
             <h2>Dados do aluno</h2>
             <label for="nomeAluno">Nome completo do aluno:</label>
             <input type="text" id="nomeAluno">
 
-            <label for="nota1Bim">Notas do 1º bimestre:</label>
-            <input type="number" id="nota1Bim">
-
-            <label for="nota2Bim">Notas do 2º bimestre:</label>
-            <input type="number" id="nota2Bim">
-
-            <label for="nota3Bim">Notas do 3º bimestre:</label>
-            <input type="number" id="nota3Bim">
-
-            <label for="nota4Bim">Notas do 4º bimestre:</label>
-            <input type="number" id="nota4Bim">
-
             <label for="frequenciaAluno">Frequencia % do aluno:</label>
             <input type="number" id="frequenciaAluno">
-
+            
+            <div id="bimestre">
+              <div class="linha-bimestre">
+                <div class="campo-bimestre">
+                  <label for="nota1Bim">1º Bimestre:</label>
+                  <input type="number" id="nota1Bim">
+                </div>
+                <div class="campo-bimestre">
+                  <label for="nota2Bim">2º bimestre:</label>
+                  <input type="number" id="nota2Bim">
+                </div>
+              </div>
+              <div class="linha-bimestre">
+                <div class="campo-bimestre">
+                  <label for="nota3Bim">3º Bimestre:</label>
+                  <input type="number" id="nota3Bim">
+                </div>
+                <div class="campo-bimestre">
+                  <label for="nota4Bim">4º Bimestre:</label>
+                  <input type="number" id="nota4Bim">
+                </div>
+              </div>
+            </div>
             <button type="button" id="adicionarAluno">Adicionar aluno</button>
-
             <h2 class="estilo_resultado"><span id="erro"></span></h2>
-
           </form>
         </article>
-
+          <hr>
         <article id="planilhaDados">
+          <label for="filtro">Escolha uma opção de filtro:</label>
+          <select id="filtro" name="filtro">
+            <option value="filtroNormal">Tabela normal</option>
+            <option value="filtroReprovado">Alunos Reprovados</option>
+            <option value="filtroAprovado">Alunos Aprovados</option>
+          </select>
           <table>
 
             <thead>
               <tr>
+                <th>ID do Aluno</th>
                 <th>Nome do Aluno</th>
-                <th>Nota do aluno</th>
                 <th>Frequencia do aluno</th>
+                <th>Notas do aluno</th>
                 <th>Média</th>
                 <th>Total nota</th>
                 <th>Status aluno</th>
-                <th>Ação</th>
+                <th>Ações</th>
               </tr>
             </thead>
 
@@ -69,6 +91,6 @@
       <p>&copy; 2025 - Todos os direitos reservados</p>
     </footer>
 
-    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/main.js" defer></script>
   </body>
 </html>

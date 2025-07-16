@@ -1,0 +1,244 @@
+/* ======= Reset ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+/*-----------------TEMAS----------------*/
+body.tema-claro {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.tema-escuro {
+  background-color: #404040;
+  color: #fff;
+}
+
+/* ======= Estrutura ======= */
+main, #dadosAluno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  color: #000;
+  font-size: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ======= Cabeçalho e Rodapé ======= */
+header, footer {
+  background: #1eabb0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+header {
+  font-family: a;
+  padding: 20px;
+  margin-bottom: 80px;
+  min-height: 60px;
+}
+header h1 {
+  font-size: 70px;
+  padding: 20px 0;
+}
+header p {
+  font-size: 50px;
+}
+footer {
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 18px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* ======= Botões ======= */
+button {
+  margin: 20px;
+  padding: 15px;
+  background: #1eabb0;
+  color: black;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+button:hover {
+  background: #2e5a5c;
+  color: white;
+}
+select{
+  margin: 20px;
+  font-size: 20px;
+}
+
+/* Container */
+.container {
+  background-color: #f1f1f1;
+  color: rgb(0, 0, 0);
+  border: 10px solid #2d8386;
+  border-radius: 19px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
+  width: 1240px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* ========= Botões pequenos ==========*/
+#planilhaDados .btn-acao {
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 1px;
+  background: white;
+  color: #1eabb0;
+}
+#planilhaDados .btn-acao {
+  width: auto;
+  padding: 5px 10px;
+  background: #1eabb0;
+  color: white;
+}
+#planilhaDados .btn-acao:hover,button:hover {
+  background: #2e5a5c;
+  color: white;
+}
+
+/* ======= Inputs ======= */
+#dadosAluno input,
+.campo-bimestre input {
+  width: 300px;
+  padding: 8px;
+  margin: 10px auto;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: #8b8b8b;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+}
+#dadosAluno input:focus {
+  outline: 2px solid #1eabb0;
+  background: #8b8b8b;
+  color: black;
+}
+
+/* ======= Bimestres ======= */
+#bimestre {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.linha-bimestre {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.campo-bimestre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.campo-bimestre label {
+  margin-bottom: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+.campo-bimestre input {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+}
+/*======= Botões filtro ======= */
+#filtro{
+  margin: 20px;
+  font-size: 20px;
+}
+
+/* ======= Tabela ======= */
+#planilhaDados {
+  color: black;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+#planilhaDados table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(216, 216, 216);
+  font-size: 16px;
+}
+#planilhaDados th, #planilhaDados td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: center;
+}
+#planilhaDados thead {
+  background: #4b4b4b;
+  color: white;
+}
+#planilhaDados tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+#planilhaDados tbody tr:hover {
+  background: #d6f2f2;
+}
+
+/* ======= Botão de Tema ======= */
+.toggleTheme {
+  padding: 0px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #26dae0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* ======= Botão Zoom======= */
+#zoomControls{
+  padding: 10px;
+  margin: 0px;
+  border-radius: 20px;
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  background: #26dae0;
+  color: white;
+  width: 130px;
+  height: auto;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#zoomControls button{
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 1px;
+  background: white;
+  color: #1eabb0;
+}
