@@ -11,3 +11,8 @@ export function calcularMedia(notas) {
   const media = notasConvertidas.reduce((soma, n) => soma + n, 0) / notasConvertidas.length;
   return media;
 }
+
+export function gerarIdUnico(ultimoId) {
+  let novoId = ultimoId + 1;
+  return novoId;
+}
