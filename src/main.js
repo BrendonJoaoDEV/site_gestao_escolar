@@ -1,6 +1,7 @@
 import { botaoEvento, carregarAlunos} from "./utils/utils.js";
 import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia } from "./modules/calculo.js";
+import { acessibilidade } from "./modules/acessibilidade.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const tabela = document.getElementById('tableBody');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const entradaNota4 = document.getElementById('nota4Bim');
   let estruturaDados = new Array;
 
+  acessibilidade();
   botaoEvento('adicionarAluno', () => {
     let arrayNotas = [entradaNota1.value, entradaNota2.value, entradaNota3.value, entradaNota4.value];
     

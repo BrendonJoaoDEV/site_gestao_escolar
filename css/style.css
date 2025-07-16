@@ -7,6 +7,16 @@
 body {
   font-family: Arial, sans-serif;
 }
+/*-----------------TEMAS----------------*/
+body.tema-claro {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.tema-escuro {
+  background-color: #404040;
+  color: #fff;
+}
 
 /* ======= Estrutura ======= */
 main, #dadosAluno {
@@ -15,7 +25,6 @@ main, #dadosAluno {
   align-items: center;
 }
 main {
-  background: #fff;
   color: #000;
   font-size: 20px;
   justify-content: center;
@@ -71,26 +80,10 @@ select{
   margin: 20px;
   font-size: 20px;
 }
-/*-----------------AUMENTAR E DIMINUIR FONTES--------*/
-body {
-  font-size: 16px;
-  transition: font-size 0.3s;
-}
 
-/*-----------------TEMAS----------------*/
-body.tema-claro {
-  background-color: #fff;
-  color: #000;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.tema-escuro {
-  background-color: #121212;
-  color: #fff;
-}
 /* Container */
 .container {
-  background: #ffffff;
+  background-color: #f1f1f1;
   color: rgb(0, 0, 0);
   border: 10px solid #2d8386;
   border-radius: 19px;
@@ -207,7 +200,8 @@ body.tema-escuro {
 }
 
 /* ======= Botão de Tema ======= */
-#toggleTheme {
+.toggleTheme {
+  padding: 0px;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -221,4 +215,26 @@ body.tema-escuro {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+}
+
+/* ======= Botão Zoom======= */
+#zoomControls{
+  padding: 10px;
+  margin: 0px;
+  border-radius: 20px;
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  background: #26dae0;
+  color: white;
+  width: 130px;
+  height: auto;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#zoomControls button{
+  background: #ffffff;
 }
