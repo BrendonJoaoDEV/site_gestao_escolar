@@ -88,21 +88,19 @@ select{
   border: 10px solid #2d8386;
   border-radius: 19px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
-  width: 95%;
-  max-width: 900px;
+  width: 1240px;
   padding: 15px;
   text-align: center;
 }
 
-/* Botões pequenos */
-#zoomControls button,
+/* ========= Botões pequenos ==========*/
 #planilhaDados .btn-acao {
   width: 30px;
   height: 30px;
-  padding: 5px;
+  padding: 1px;
   font-size: 16px;
   border-radius: 5px;
-  margin: 2px;
+  margin: 1px;
   background: white;
   color: #1eabb0;
 }
@@ -112,8 +110,7 @@ select{
   background: #1eabb0;
   color: white;
 }
-#planilhaDados .btn-acao:hover,
-#zoomControls button:hover {
+#planilhaDados .btn-acao:hover,button:hover {
   background: #2e5a5c;
   color: white;
 }
@@ -236,5 +233,12 @@ select{
 }
 
 #zoomControls button{
-  background: #ffffff;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 1px;
+  background: white;
+  color: #1eabb0;
 }
