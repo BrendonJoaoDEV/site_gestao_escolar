@@ -1,7 +1,7 @@
 import { botaoEvento, carregarAlunos} from "./utils/utils.js";
 import { acessibilidade } from "./modules/acessibilidade.js"
-import { gerarIdUnico, adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
-import { calcularMedia } from "./modules/calculo.js";
+import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
+import { calcularMedia, gerarIdUnico } from "./modules/calculo.js";
 import { filtrarSituacao } from "./modules/filtro.js";
 import { verificarSituacao } from "./modules/situacao.js";
 
@@ -21,6 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
   acessibilidade();
   botaoEvento('adicionarAluno', () => {
     let idUnico = 0;
+
+    if (estruturaDados) {
+      if (estruturaDados.length > 0) {
+        let copiaEstruturaDados = estruturaDados.slice()
+        let ultimoAluno = copiaEstruturaDados.pop();
+        if (ultimoAluno === undefined) {
+          idUnico = 0;
+        } else {
+          idUnico = ultimoAluno.id;
+        }
+      } else {
+        idUnico = 0;
+      }
+    }
 
     idUnico = gerarIdUnico(idUnico);
 
