@@ -1,4 +1,4 @@
-import { botaoEvento, carregarAlunos, validarNome, validarNota} from "./utils/utils.js";
+import { validarNota, validarNome, botaoEvento, carregarAlunos, limparFormulario } from "./utils/utils.js";
 import { acessibilidade } from "./modules/acessibilidade.js";
 import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia, gerarIdUnico } from "./modules/calculo.js";
@@ -10,13 +10,13 @@ let estruturaDados = [];
 document.addEventListener('DOMContentLoaded', () => {
   const tabela = document.getElementById('tableBody');
   const filtro = document.getElementById('filtro');
-  const saidaErro = document.getElementById('erro');
   const entradaNome = document.getElementById('nomeAluno');
   const entradaFrequencia = document.getElementById('frequenciaAluno');
   const entradaNota1 = document.getElementById('nota1Bim');
   const entradaNota2 = document.getElementById('nota2Bim');
   const entradaNota3 = document.getElementById('nota3Bim');
   const entradaNota4 = document.getElementById('nota4Bim');
+  const campos = [entradaNome, entradaFrequencia, entradaNota1, entradaNota2, entradaNota3, entradaNota4];
 
   acessibilidade();
 
@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
       estruturaDados = removerAluno(estruturaDados, idRemover);
       atualizarTabela();
     });
+
+    limparFormulario(campos);
   });
 
   filtro.addEventListener('input', () => {
