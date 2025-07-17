@@ -24,15 +24,5 @@ export function removerAluno (estruturaDados, idAlunoRemover) {
     // Remove o aluno que deve ser removido
     estruturaDados.splice(alunoRemover.id-1, 1)
 
-    // Lista os alunos depois do aluno removido
-    const alunosDepoisRemovido = estruturaDados.filter((aluno) => {
-        return aluno.id > idAlunoRemover;
-    });
-
-    // Redefine os ids dos alunos depois do aluno removido para q eles continuem em uma contagem
-    alunosDepoisRemovido.map((aluno) => {
-        return aluno.id = aluno.id -1;
-    });
-
     return estruturaDados;
 }
