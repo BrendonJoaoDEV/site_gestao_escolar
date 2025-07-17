@@ -1,4 +1,4 @@
-import { validarNota, validarNome, botaoEvento, carregarAlunos, limparFormulario } from "./utils/utils.js";
+import { validarNota, validarFrequencia, validarNome, botaoEvento, carregarAlunos, limparFormulario } from "./utils/utils.js";
 import { acessibilidade } from "./modules/acessibilidade.js";
 import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia, gerarIdUnico } from "./modules/calculo.js";
@@ -40,15 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let nomeAluno = entradaNome.value;
 
-    if (validarNome(entradaNome.value) === null) {
+    if (validarNome(nomeAluno) === null) {
       return;
     }
 
     let frequenciaAluno = entradaFrequencia.value;
 
+    if (validarFrequencia(frequenciaAluno) === null) {
+      return;
+    }
+
     if (validarNota(entradaNota1.value, entradaNota2.value, entradaNota3.value, entradaNota4.value) === null) {
-        return;
-      }
+      return;
+    }
 
     let arrayNotas = [
       entradaNota1.value,
