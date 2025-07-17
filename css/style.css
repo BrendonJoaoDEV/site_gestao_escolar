@@ -1,244 +1,314 @@
-/* ======= Reset ======= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
-/*-----------------TEMAS----------------*/
+
+:root {
+    --cor-fundo-corpo: #ffffff;
+    --cor-texto-geral: #000000;
+    --cor-cabecalho-rodape-fundo: #1eabb0;
+    --cor-cabecalho-rodape-texto: white;
+    --cor-botao-fundo: #1eabb0;
+    --cor-botao-texto: black;
+    --cor-botao-foco-fundo: #2e5a5c;
+    --cor-botao-foco-texto: white;
+    --cor-selecao-fundo: #8b8b8b;
+    --cor-selecao-texto: rgb(0, 0, 0);
+    --cor-selecao-borda: #2d8386;
+    --cor-container-fundo: #f1f1f1;
+    --cor-container-texto: rgb(0, 0, 0);
+    --cor-container-borda: #2d8386;
+    --cor-campo-fundo: #8b8b8b;
+    --cor-campo-texto: rgb(0, 0, 0);
+    --cor-campo-foco-contorno: #1eabb0;
+    --cor-rotulo-texto: rgb(0, 0, 0);
+    --cor-tabela-texto: black;
+    --cor-tabela-fundo: rgb(216, 216, 216);
+    --cor-tabela-borda: #000000;
+    --cor-tabela-cabecalho-fundo: #4b4b4b;
+    --cor-tabela-cabecalho-texto: white;
+    --cor-tabela-linha-par-fundo: #f2f2f2;
+    --cor-fundo-linha-tabela-mouse: #d6f2f2;
+    --cor-alternar-zoom-fundo: #26dae0;
+    --cor-alternar-zoom-texto: white;
+    --cor-botao-zoom-fundo: white;
+    --cor-botao-zoom-texto: #1eabb0;
+}
+
+body.tema-escuro {
+    --cor-fundo-corpo: #404040;
+    --cor-texto-geral: #fff;
+    --cor-cabecalho-rodape-fundo: #1eabb0;
+    --cor-cabecalho-rodape-texto: #f5f5f5;
+    --cor-botao-fundo: #2d8386;
+    --cor-botao-texto: white;
+    --cor-botao-foco-fundo: #1eabb0;
+    --cor-botao-foco-texto: #000000;
+    --cor-selecao-fundo: #2e5a5c;
+    --cor-selecao-texto: #f5f5f5;
+    --cor-selecao-borda: #1eabb0;
+    --cor-container-fundo: #343735;
+    --cor-container-texto: #f5f5f5;
+    --cor-container-borda: #1eabb0;
+    --cor-campo-fundo: #2e5a5c;
+    --cor-campo-texto: #f5f5f5;
+    --cor-campo-foco-contorno: #1eabb0;
+    --cor-rotulo-texto: #f5f5f5;
+    --cor-tabela-texto: #f5f5f5;
+    --cor-tabela-fundo: #343735;
+    --cor-tabela-borda: #1a1a1a;
+    --cor-tabela-cabecalho-fundo: #2d8386;
+    --cor-tabela-cabecalho-texto: #f5f5f5;
+    --cor-tabela-linha-par-fundo: #3a3a3a;
+    --cor-fundo-linha-tabela-mouse: #4a4a4a;
+    --cor-alternar-zoom-fundo: #1eabb0;
+    --cor-alternar-zoom-texto: #f5f5f5;
+    --cor-botao-zoom-fundo: #2e5a5c;
+    --cor-botao-zoom-texto: #1eabb0;
+}
+
 body.tema-claro {
-  background-color: #fff;
-  color: #000;
-  transition: background-color 0.3s, color 0.3s;
+    background-color: var(--cor-fundo-corpo);
+    color: var(--cor-texto-geral);
+    transition: background-color 0.3s, color 0.3s;
 }
 body.tema-escuro {
-  background-color: #404040;
-  color: #fff;
+    background-color: var(--cor-fundo-corpo);
+    color: var(--cor-texto-geral);
 }
 
-/* ======= Estrutura ======= */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
 main, #dadosAluno {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 main {
-  color: #000;
-  font-size: 20px;
-  justify-content: center;
-  padding: 20px;
+    color: var(--cor-texto-geral);
+    font-size: 20px;
+    justify-content: center;
+    padding: 20px;
+    transition: font-size 0.2s ease;
 }
 
-/* ======= Cabeçalho e Rodapé ======= */
 header, footer {
-  background: #1eabb0;
-  color: white;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: var(--cor-cabecalho-rodape-fundo);
+    color: var(--cor-cabecalho-rodape-texto);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 header {
-  font-family: a;
-  padding: 20px;
-  margin-bottom: 80px;
-  min-height: 60px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin-bottom: 80px;
+    min-height: 60px;
 }
 header h1 {
-  font-size: 70px;
-  padding: 20px 0;
+    font-size: 70px;
+    padding: 20px 0;
 }
 header p {
-  font-size: 50px;
+    font-size: 50px;
 }
 footer {
-  padding: 20px 0;
-  margin-top: 40px;
-  font-size: 18px;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-  width: 100%;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 18px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
-/* ======= Botões ======= */
 button {
-  margin: 20px;
-  padding: 15px;
-  background: #1eabb0;
-  color: black;
-  font-size: 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 20px;
+    margin: 20px;
+    padding: 15px;
+    background: var(--cor-botao-fundo);
+    color: var(--cor-botao-texto);
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
 }
 button:hover {
-  background: #2e5a5c;
-  color: white;
+    background: var(--cor-botao-foco-fundo);
+    color: var(--cor-botao-foco-texto);
 }
 select{
-  margin: 20px;
-  font-size: 20px;
+    margin: 20px;
+    font-size: 20px;
+    background-color: var(--cor-selecao-fundo);
+    color: var(--cor-selecao-texto);
+    border: 1px solid var(--cor-selecao-borda);
+    border-radius: 5px;
+    padding: 5px;
 }
 
-/* Container */
 .container {
-  background-color: #f1f1f1;
-  color: rgb(0, 0, 0);
-  border: 10px solid #2d8386;
-  border-radius: 19px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
-  width: 1240px;
-  padding: 15px;
-  text-align: center;
+    background-color: var(--cor-container-fundo);
+    color: var(--cor-container-texto);
+    border: 10px solid var(--cor-container-borda);
+    border-radius: 19px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.295);
+    width: 1240px;
+    padding: 15px;
+    text-align: center;
 }
 
-/* ========= Botões pequenos ==========*/
-#planilhaDados .btn-acao {
-  width: 30px;
-  height: 30px;
-  padding: 1px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin: 1px;
-  background: white;
-  color: #1eabb0;
-}
-#planilhaDados .btn-acao {
-  width: auto;
-  padding: 5px 10px;
-  background: #1eabb0;
-  color: white;
-}
-#planilhaDados .btn-acao:hover,button:hover {
-  background: #2e5a5c;
-  color: white;
+body.tema-escuro .container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* ======= Inputs ======= */
+#planilhaDados .btn-acao {
+    width: auto;
+    padding: 5px 10px;
+    background: var(--cor-botao-fundo);
+    color: var(--cor-botao-foco-texto);
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 1px;
+    border: none;
+    transition: 0.3s;
+}
+#planilhaDados .btn-acao:hover {
+    background: var(--cor-botao-foco-fundo);
+    color: var(--cor-botao-foco-texto);
+}
+
 #dadosAluno input,
 .campo-bimestre input {
-  width: 300px;
-  padding: 8px;
-  margin: 10px auto;
-  font-size: 20px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  background: #8b8b8b;
-  border: none;
-  border-radius: 5px;
-  font-family: inherit;
+    width: 300px;
+    padding: 8px;
+    margin: 10px auto;
+    font-size: 20px;
+    text-align: center;
+    color: var(--cor-campo-texto);
+    background: var(--cor-campo-fundo);
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
 }
 #dadosAluno input:focus {
-  outline: 2px solid #1eabb0;
-  background: #8b8b8b;
-  color: black;
+    outline: 2px solid var(--cor-campo-foco-contorno);
+    background: var(--cor-campo-fundo);
+    color: var(--cor-campo-texto);
 }
 
-/* ======= Bimestres ======= */
 #bimestre {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
 }
 .linha-bimestre {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 .campo-bimestre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .campo-bimestre label {
-  margin-bottom: 5px;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--cor-rotulo-texto);
+    font-size: 16px;
 }
 .campo-bimestre input {
-  width: 100px;
-  height: 30px;
-  padding: 5px;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
 }
-/*======= Botões filtro ======= */
 #filtro{
-  margin: 20px;
-  font-size: 20px;
+    margin: 20px;
+    font-size: 20px;
 }
 
-/* ======= Tabela ======= */
 #planilhaDados {
-  color: black;
-  margin-top: 20px;
-  overflow-x: auto;
+    color: var(--cor-tabela-texto);
+    margin-top: 20px;
+    overflow-x: auto;
 }
 #planilhaDados table {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgb(216, 216, 216);
-  font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--cor-tabela-fundo);
+    font-size: 16px;
 }
 #planilhaDados th, #planilhaDados td {
-  border: 1px solid #000000;
-  padding: 10px;
-  text-align: center;
+    border: 1px solid var(--cor-tabela-borda);
+    padding: 10px;
+    text-align: center;
 }
 #planilhaDados thead {
-  background: #4b4b4b;
-  color: white;
+    background: var(--cor-tabela-cabecalho-fundo);
+    color: var(--cor-tabela-cabecalho-texto);
 }
 #planilhaDados tbody tr:nth-child(even) {
-  background: #f2f2f2;
+    background: var(--cor-tabela-linha-par-fundo);
 }
 #planilhaDados tbody tr:hover {
-  background: #d6f2f2;
+    background: var(--cor-fundo-linha-tabela-mouse);
 }
 
-/* ======= Botão de Tema ======= */
 .toggleTheme {
-  padding: 0px;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #26dae0;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+    padding: 0px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--cor-alternar-zoom-fundo);
+    color: var(--cor-alternar-zoom-texto);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.3s;
 }
 
-/* ======= Botão Zoom======= */
 #zoomControls{
-  padding: 10px;
-  margin: 0px;
-  border-radius: 20px;
-  position: fixed;
-  top: 150px;
-  right: 20px;
-  background: #26dae0;
-  color: white;
-  width: 130px;
-  height: auto;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 20px;
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    background: var(--cor-alternar-zoom-fundo);
+    color: var(--cor-alternar-zoom-texto);
+    width: 130px;
+    height: auto;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: 0.3s;
 }
 
 #zoomControls button{
-  width: 30px;
-  height: 30px;
-  padding: 1px;
-  font-size: 16px;
-  border-radius: 5px;
-  margin: 1px;
-  background: white;
-  color: #1eabb0;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 1px;
+    background: var(--cor-botao-zoom-fundo);
+    color: var(--cor-botao-zoom-texto);
+    transition: 0.3s;
+}
+
+#zoomControls button:hover {
+    background: var(--cor-botao-foco-fundo);
+    color: var(--cor-botao-foco-texto);
 }
