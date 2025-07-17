@@ -1,4 +1,4 @@
-import { botaoEvento, carregarAlunos } from "./utils/utils.js";
+import { botaoEvento, carregarAlunos, validarNome, validarNota} from "./utils/utils.js";
 import { acessibilidade } from "./modules/acessibilidade.js";
 import { adicionarAluno, alterarAluno, removerAluno } from "./modules/alunos.js";
 import { calcularMedia, gerarIdUnico } from "./modules/calculo.js";
@@ -10,6 +10,7 @@ let estruturaDados = [];
 document.addEventListener('DOMContentLoaded', () => {
   const tabela = document.getElementById('tableBody');
   const filtro = document.getElementById('filtro');
+  const saidaErro = document.getElementById('erro');
   const entradaNome = document.getElementById('nomeAluno');
   const entradaFrequencia = document.getElementById('frequenciaAluno');
   const entradaNota1 = document.getElementById('nota1Bim');
@@ -38,16 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
     idUnico = gerarIdUnico(idUnico);
 
     let nomeAluno = entradaNome.value;
+
+    if (validarNome(entradaNome.value) === null) {
+      return;
+    }
+
     let frequenciaAluno = entradaFrequencia.value;
+
+    if (validarNota(entradaNota1.value, entradaNota2.value, entradaNota3.value, entradaNota4.value) === null) {
+        return;
+      }
+
     let arrayNotas = [
-      Number(entradaNota1.value),
-      Number(entradaNota2.value),
-      Number(entradaNota3.value),
-      Number(entradaNota4.value)
+      entradaNota1.value,
+      entradaNota2.value,
+      entradaNota3.value,
+      entradaNota4.value
     ];
 
     let mediaAluno = calcularMedia(arrayNotas);
-    let totalAluno = arrayNotas.reduce((soma, n) => soma + n, 0);
+    let totalAluno = arrayNotas.reduce((soma, n) => soma + Number(n), 0);
     let situacaoAluno = verificarSituacao(mediaAluno, frequenciaAluno);
 
     let aluno = {
