@@ -88,7 +88,6 @@ export function carregarAlunos(bancoDados, tabelaHtml, aoRemover) {
           <td>${aluno.situacao}</td>
           <td>
               <button type="button" class="apagarDados" data-id="${aluno.id}">apagar</button>
-              <button type="button" class="alterarDados" data-id="${aluno.id}">alterar</button>
           </td>
         </tr>`;
     });
