@@ -107,3 +107,9 @@ export function carregarAlunos(bancoDados, tabelaHtml, aoRemover) {
     }
   }
 }
+
+export function limparFormulario (campos) {
+  campos.forEach((campo) => {
+    campo.value = '';
+  });
+}
