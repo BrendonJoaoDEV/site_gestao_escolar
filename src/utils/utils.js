@@ -12,7 +12,7 @@ export function validarNota(nota1Bim, nota2Bim, nota3Bim, nota4Bim) {
 
   // Números válidos
   if (isNaN(nota1Bim) || isNaN(nota2Bim) || isNaN(nota3Bim) || isNaN(nota4Bim)) {
-    alert("Por favor, preencha o campo corretamente.")
+    alert("Por favor, preencha as notas com números.")
     return null;
   }
 
@@ -32,6 +32,21 @@ export function validarNota(nota1Bim, nota2Bim, nota3Bim, nota4Bim) {
   return { nota1Bim, nota2Bim, nota3Bim, nota4Bim };
 }
 
+export function validarFrequencia(frequencia) {
+  // Campo vazio
+  if (frequencia === '') {
+    alert("Todos os campos devem ser preenchidos.")
+    return null;
+  }
+
+  // Campos escritos
+  if (isNaN(Number(frequencia))) {
+    alert("Por favor, preencha a frequência com um número.")
+    return null;
+  }
+
+  return frequencia;
+}
 
 export function validarNome(nome) {
 
